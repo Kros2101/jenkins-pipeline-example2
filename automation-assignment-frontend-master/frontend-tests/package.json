@@ -1,0 +1,18 @@
+{
+  "name": "frontend-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "test:vrt": "percy exec cypress run --spec 'cypress/integration/visual-regression.spec.js'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/cli": "*",
+    "@percy/cypress": "^3.1.0",
+    "cypress": "^7.1.0"
+  }
+}

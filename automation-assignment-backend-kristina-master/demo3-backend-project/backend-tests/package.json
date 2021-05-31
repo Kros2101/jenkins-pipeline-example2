@@ -1,0 +1,21 @@
+{
+  "name": "backend-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --spec cypress/integration/backend-auth.spec.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.12.1",
+    "mochawesome": "^6.2.2"
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}
