@@ -36,7 +36,7 @@ pipeline {
                     cd automation-assignment-backend-kristina-master/demo3-backend-project/backend-tests/
                     pwd
                     ls -lart
-                    npm install && npm run test:vrt
+                    npm install && npm run cypress:run
                     '''
                     archiveArtifacts allowEmptyArchive: true, artifacts: 'automation-assignment-backend-kristina-master/demo3-backend-project/backend-tests/cypress/videos/**', followSymlinks: false
 
