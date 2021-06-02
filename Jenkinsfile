@@ -30,10 +30,27 @@ pipeline {
                       ])
             }
         }
-                   stage('Backend tests') {
+                stage('Backend tests') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                    cd automation-assignment-backend-master/backend-tests/
+                    pwd
+                    ls -lart
+                    npm install && npm run test:vrt
+                    '''
+                    archiveArtifacts allowEmptyArchive: true, artifacts: 'automation-assignment-backend-master/backend-tests/cypress/videos/**', followSymlinks: false
+
+                    publishHTML([
+                      allowMissing: false, 
+                      alwaysLinkToLastBuild: false, 
+                      keepAll: false,
+                      reportDir: 'automation-assignment-backend-master/backend-tests/mochawesome-report',
+                      reportFiles: 'mochawesome.html', 
+                      reportName: 'Backend Report',
+                      reportTitles: ''
+                      ])
+
+
             }
         }
                 stage('Performance tests') {
