@@ -1,0 +1,176 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-01T19:38:06.105Z",
+    "end": "2021-06-01T19:38:28.521Z",
+    "duration": 22416,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e39caeaa-583d-485e-acfe-7e71c838e108",
+      "title": "",
+      "fullFile": "cypress/integration/regression-page-objects.spec.js",
+      "file": "cypress/integration/regression-page-objects.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "758d40e3-d211-4027-b32b-6f0975fcd969",
+          "title": "Test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test case1: Perform login and logout",
+              "fullTitle": "Test suite Test case1: Perform login and logout",
+              "timedOut": null,
+              "duration": 4427,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "4c368b7c-8ff8-4f19-8f30-8ce19dac7e6c",
+              "parentUUID": "758d40e3-d211-4027-b32b-6f0975fcd969",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 2: Get all clients",
+              "fullTitle": "Test suite Test case 2: Get all clients",
+              "timedOut": null,
+              "duration": 3778,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\nindexFuncs.getAllClientsRequest(cy, 'Clients');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "51daf52d-7851-4965-818d-f6f7935d62a3",
+              "parentUUID": "758d40e3-d211-4027-b32b-6f0975fcd969",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 3: Get all BillsRequest",
+              "fullTitle": "Test suite Test case 3: Get all BillsRequest",
+              "timedOut": null,
+              "duration": 4135,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\nindexFuncs.getAllBillsRequest(cy, 'Bills');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "bc4de50d-abdd-4f38-8872-3259e076430c",
+              "parentUUID": "758d40e3-d211-4027-b32b-6f0975fcd969",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 4: Get all rooms",
+              "fullTitle": "Test suite Test case 4: Get all rooms",
+              "timedOut": null,
+              "duration": 3306,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\nindexFuncs.getAllRoomsRequest(cy, 'Rooms');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "8e9a6c7f-77e2-46ce-b537-e2013862677c",
+              "parentUUID": "758d40e3-d211-4027-b32b-6f0975fcd969",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test case 5: Get all reservations",
+              "fullTitle": "Test suite Test case 5: Get all reservations",
+              "timedOut": null,
+              "duration": 3534,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "indexFuncs.performValidLogin(cy, targets.username, targets.password, 'Tester Hotel Overview');\nindexFuncs.getAllReservationsRequest(cy, 'Rooms');\ndashBoardFuncs.performLogout(cy, 'Login');",
+              "err": {},
+              "uuid": "39f4f466-e098-4df3-bd90-2d7f3079ae25",
+              "parentUUID": "758d40e3-d211-4027-b32b-6f0975fcd969",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4c368b7c-8ff8-4f19-8f30-8ce19dac7e6c",
+            "51daf52d-7851-4965-818d-f6f7935d62a3",
+            "bc4de50d-abdd-4f38-8872-3259e076430c",
+            "8e9a6c7f-77e2-46ce-b537-e2013862677c",
+            "39f4f466-e098-4df3-bd90-2d7f3079ae25"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19180,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
