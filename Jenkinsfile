@@ -47,11 +47,11 @@ pipeline {
                       allowMissing: false, 
                       alwaysLinkToLastBuild: false, 
                       keepAll: false,
-                      reportDir: 'performance-assignment-kristina-master/performance-tests/html-report',
+                      reportDir: 'performance-assignment-kristina-master/performance-test/html-reports',
                       reportFiles: 'index.html', 
                       reportName: 'JMeter dashboard Performance Report',
                       reportTitles: ''
-                      ])
+                ])
             }
         }
     }
