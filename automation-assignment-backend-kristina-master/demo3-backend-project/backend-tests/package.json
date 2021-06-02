@@ -6,7 +6,7 @@
   "scripts": {
     "test": "cypress open",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec cypress/integration/backend-auth.spec.js"
+    "cypress:run": "cypress run --spec cypress/integration/backend-auth.spec.js --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
