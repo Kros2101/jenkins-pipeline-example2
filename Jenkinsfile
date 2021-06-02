@@ -4,14 +4,30 @@ pipeline {
     stages {
         stage('Deploy/Build application') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                  echo 'Application deployed successfully!'
+                  '''
             }
         }
                 stage('Frontend tests') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                  cd automation-assignment-frontend-master/frontend-tests/
+                  pwd
+                  ls -lart
+                  npm install && npm run test:vrt
+                  '''
+                  archiveArtifacts allowEmptyArchive: true, artifacts: 'automation-assignment-frontend-master/frontend-tests/cypress/videos/**', followSymlinks: false
+
+                  publishHTML([
+                      allowMissing: false, 
+                      alwaysLinkToLastBuild: false, 
+                      keepAll: false,
+                      reportDir: 'automation-assignment-frontend-master/frontend-tests/mochawesome-report',
+                      reportFiles: 'mochawesome.html', 
+                      reportName: 'Frontend Report',
+                      reportTitles: ''
+                      ])
             }
         }
                    stage('Backend tests') {
@@ -22,8 +38,20 @@ pipeline {
         }
                 stage('Performance tests') {
             steps {
-                sh 'pwd'
-                sh 'ls -lart'
+                sh '''
+                    cd performance-assignment-kristina-master/performance-test
+                    rm test1.csv -Rf && rm html-reports/ -Rf
+                    jmeter -n -t login-logout.jmx -l test1.csv -e -o html-reports/
+                '''
+                publishHTML([
+                      allowMissing: false, 
+                      alwaysLinkToLastBuild: false, 
+                      keepAll: false,
+                      reportDir: 'performance-assignment-kristina-master/performance-tests/html-report',
+                      reportFiles: 'index.html', 
+                      reportName: 'JMeter dashboard Performance Report',
+                      reportTitles: ''
+                      ])
             }
         }
     }
